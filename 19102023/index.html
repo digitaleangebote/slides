@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Die erste Sitzung der digitalen Angebote AG</title>
+    <title>Die zweite Sitzung der digitalen Angebote AG</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="../shower/themes/ribbon/styles/styles.css">
@@ -32,14 +32,159 @@
                 <li>vorstellungspadlet</li>
                 <li>unser lernmaterial</li>
                 <li>diese folien</li>
-            </ul>
+                </ul>
             </li>
-            <li>zusammen eduroam für android erarbeiten</li>
-            <li>unsere daten auf der uniseite herausfinden</li>
-            <li>gute passwörter und deren speicherort</li>
-            <li>unser unipasswort in ein richtig gutes passwort ändern</li>
+            <li>microsoft office 365 über die uni kostenlos herunterladen
+            </li>
+            
+            <li>die eduroam geschichte</li>  
         </ol>
     </section>
+    <section class="slide">
+        <h3>microsoft office 365 über die uni kostenlos herunterladen</h3>
+            <p>ohne groß auf die einzelheiten einzugehen, aber die wichtigste frage trotzdem zu beantworten</p>
+            <p><a href="https://www.microsoft.com/de-de/education/products/office">hier</a> die uni email adresse eingeben und dann den anweisungen folgen</p>
+            <p>keine angst microsoft hat unsere uniemailadressen sowieso schon, da das ganze mailsystem der uni (leider) von microsoft gemanagt wird</p>
+    </section>
+    <section class="slide" id="cover">
+        <h2>die eduroam geschichte</h2>
+        <ol>
+        <li>warum und wieso eduroam?</li>
+        <li>wo gibt es überall eduroam</li>
+        <li>eduroam einrichten
+            <ul>
+                <li>das ding mit dem neuen zertifikat</li>
+                <li>eduroam auf dem rechner einrichten</li>
+                <li>eduroam auf dem smartphone einrichten</li>
+            </ul>
+            </li>
+        </ol>
+    </section>
+    <section class="slide" id="cover">
+        <h2>Eduroam</h2>
+        <p><a href="https://eduroam.org/where/">wo gibt es überall eduroam</a></p>
+        <figure>
+            <img class="cover" src="../pictures/eduroam.png" alt="karte mit den eduroamlaendern">
+        </figure>
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: black;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: black;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: black;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>eduroam einrichten</h2>
+        <p>das ding mit dem neuen rootzertifikat</p>
+        <p>eduroam auf dem rechner einrichten</p>
+        <p>eduroam auf dem smartphone einrichten</p>
+        </section>
+    <section class="slide">
+        <h2>das ding mit dem neuen rootzertifikat</h2>
+        <p>was ist ein digitales zertifikat?</p>
+        <p>was ist eine zertifizierungsstelle?</p>
+        <p>was ist ein rootzertifikat?</p>
+        <p>welche rootzertifikate sind auf welchen geräten?</p>
+    </section>
+    <section class="slide">
+        <h2>was ist ein digitales zertifikat?</h2>
+        <p>ein digitales zertifikat ist ein elektronisches dokument, das die zugehörigkeit einer person oder eines computers zu einer organisation bestätigt</p>
+        <p>es ist ein elektronischer echtheitsnachweis, der von einer zertifizierungsstelle (Certification Authority) ausgestellt wird</p>
+        <p>zertifikate kommen im internet zur verschlüsselung des datenverkehrs zum einsatz
+        </p>
+        </section>
+    <section class="slide">
+        <p>zertifikate besitzen im internet die vergleichbare funktion eines personalausweises in der offline-welt</p>
+        <p>zertifikate werden von zertifizierungsstellen ausgestellt, die ihrerseits von einer übergeordneten zertifizierungsstelle zertifiziert sind</p>
+        <p>mit hilfe eines zertifikats lässt sich ein öffentlicher schlüssel sicher einem bestimmten besitzer zuweisen</p>
+        </section>
+    <section class="slide">
+        <p>inhalte eines zertifikats sind unter anderem informationen zum namen des besitzers und über den herausgeber des zertifikats sowie zur gültigkeitsdauer und zur verwendung des zertifikats.</p>
+        </section>
+    <section class="slide">
+        <p>zertifikate ermöglichen es zusammen mit der Public Key Infrastruktur (PKI), informationen im internet sicher und verschlüsselt zu übertragen. basis der verschlüsselung bilden asymmetrische kryptographische Verfahren mit privaten und öffentlichen schlüsseln.
+        <p>das Zertifikat bestätigt zuverlässig, zu wem der öffentliche schlüssel gehört.</p>
+        <p>browser und betriebssysteme führen eine liste mit vertrauenswürdigen zertifizierungsstellen.</p>
+        </section>
+    <section class="slide">
+        <p>ist ein zertifikat von einer solchen Zertifizierungsstelle ausgestellt, betrachtet es der rechner als echt.</p>
+        <p>die ITU-empfehlung X.509 v3 regelt das format und den inhalt von digitalen zertifikaten.
+        </p>
+        </section>
+        <section class="slide">
+            <h2>was ist eine zertifizierungsstelle</h2>
+            <p>eine zertifizierungsstelle (certificate authority oder certification authority, kurz CA) ist eine vertrauenswürdige einrichtung, die digitale zertifikate zur überprüfung von identitäten im internet ausstellt. die CA prüft die identität des zertifikatsantragstellers (Person oder Organisation), bevor sie ein zertifikat ausstellt. digitale zertifikate, die von einer zertifizierungsstelle ausgestellt werden, sind entscheidend für die sichere kommunikation und transaktionen im internet und schaffen vertrauen in digitale identitäten.
+            </p>
+            </section>
+        <section class="slide">
+            <h2>was ist ein root-zertifikat</h2>
+            <p>ein root-zertifikat ist ein unsigniertes public-key-zertifikat oder selbstsigniertes zertifikat einer oberen zertifizierungsstelle (Root-CA), das dazu dient, die gültigkeit aller untergeordneten zertifikate zu validieren</p>
+
+            <p>wurzelzertifikate sind ein wichtiger bestandteil des Public-Key-Infrastruktursystems (PKI-Systems) 
+                
+            <p>die am häufigsten verwendete kommerzielle variante basiert auf dem ISO X.509-Standard</p>  
+            </section>
+        <section class="slide">              
+            <p>ein X.509-Zertifikat enthält in der regel informationen über den namen des inhabers, dessen öffentlichen schlüssel, eine gültigkeitsdauer sowie den namen der zertifizierungsstelle (CA). 
+                
+            <p>die zertifizierungsstelle signiert diese informationen mit ihrem privaten schlüssel und bestätigt dadurch die korrektheit der in dem zertifikat enthaltenden angaben. 
+            </p>
+            </section>  
+        <section class="slide">
+            <h3>welche rootzertifikate sind auf welchen geräten?</h3>
+            <p>die meisten betriebssysteme und browser enthalten eine liste mit vertrauenswürdigen zertifizierungsstellen</p>
+            <p>die liste der vertrauenswürdigen zertifizierungsstellen wird von den herstellern der betriebssysteme und browsern gepflegt</p>
+            <p>diese list ist in der regel in den einstellungen des betriebssystems oder browsers zu finden und kann in der regel auch erweitert werden</p>
+            </section>
+        <section class="slide">
+            <p><a href="https://support.apple.com/de-de/HT213464">ein beispiel für eine solche liste von rootzertifikaten</a></p>
+            <p>man kann sich die rootzertifikate auch auf dem rechner ansehen</p>
+
+        </section>
+        <section class="slide">
+            <h3>der rsa verschlüsselungsalgorithmus</h3>
+            <p>der RSA-Algorithmus ist ein asymmetrisches kryptosystem, das sowohl zum verschlüsseln als auch zum signieren von daten verwendet werden kann</p>
+            <p>das kryptosystem wurde 1977 von ron rivest, adi shamir und leonard adleman am MIT entwickelt</p>
+            <p>der name RSA setzt sich aus den anfangsbuchstaben der nachnamen der drei entwickler zusammen</p>
+            </section>
+        <section class="slide">
+            <p>der RSA-Algorithmus ist der erste praktisch verwendbare public-key-algorithmus</p>
+            <p>er ist nach wie vor einer der meistverwendeten und sichersten asymmetrischen verschlüsselungsverfahren</p>
+            </section>
+        <section class="slide">
+            <h3>SSH-Key mit dem RSA-Algorithmus</h3>
+            <p>um eine sichere verbindung zu einem entfernten computer herzustellen, braucht man einen ssh-key. einen solchen können wir erstellen und er besteht aus einem öffentlichen und einem privaten schlüssel</p>
+            <p>der öffentliche schlüssel wird auf dem entfernten computer gespeichert</p>
+            <p>der private schlüssel wird auf dem eigenen computer gespeichert</p>
+            </section>
+        <section class="slide">
+            <p>der private schlüssel sollte nicht weitergegeben werden</p>
+            <p>der öffentliche schlüssel kann weitergegeben werden</p>
+            <p>beim anmelden wird das schlüsselpaar verglichen und bei übereinstimmung eine sichere verbindung aufgebaut. </p>
+            </section>
+        <section class="slide">
+            <h2>SSH-Key mit dem RSA-Algorithmus erstellen</h2>
+            <p>um einen ssh-key zu erstellen, öffnen wir ein terminal oder die powershell und geben folgendes ein</p>
+            <p>ssh-keygen -t rsa -b 4096</p>
+            <p>der öffentliche schlüssel hat die endung .pub</p>
+            <p>der private schlüssel hat keine endung</p>
+            <p>der key wird dann im verzeichnis .ssh gespeichert</p>
+            </section>
+
 
     <!--
 Hier könnt ihr euch Musterslides aussuchen, kopieren und anpassen
