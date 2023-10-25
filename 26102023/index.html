@@ -23,11 +23,145 @@
         <h2>Herzlich willkommen allen, die wiedergekommen sind</h2>
         <h2>Herzlich willkommen allen, die heute neu dabei sind</h2>
     </section>
-<!--
+    <section class="slide">
+        <h2>was wir heute vorhaben?</h2>
+        <ol>
+            <li>sind euch irgendwelche probleme aufgefallen?</li>
+            <li>fortsetzung der eduroam geschichte</li>
             <li>unsere daten auf der uniseite herausfinden</li>
             <li>gute passwörter und deren speicherort</li>
             <li>unser unipasswort in ein richtig gutes passwort ändern</li>
-            -->
+        </ol>
+    </section>
+    <section class="slide">
+        <p>zertifikate ermöglichen es zusammen mit der Public Key Infrastruktur (PKI), informationen im internet sicher und verschlüsselt zu übertragen. basis der verschlüsselung bilden asymmetrische kryptographische Verfahren mit privaten und öffentlichen schlüsseln.
+        <p>das Zertifikat bestätigt zuverlässig, zu wem der öffentliche schlüssel gehört.</p>
+        <p>browser und betriebssysteme führen eine liste mit vertrauenswürdigen zertifizierungsstellen.</p>
+    </section>
+    <section class="slide">
+        <p>ist ein zertifikat von einer solchen Zertifizierungsstelle ausgestellt, betrachtet es der rechner als echt.</p>
+        <p>die ITU-empfehlung X.509 v3 regelt das format und den inhalt von digitalen zertifikaten.
+        </p>
+    </section>
+    <section class="slide">
+        <h2>was ist eine zertifizierungsstelle</h2>
+        <p>eine zertifizierungsstelle (certificate authority oder certification authority, kurz CA) ist eine vertrauenswürdige einrichtung, die digitale zertifikate zur überprüfung von identitäten im internet ausstellt. die CA prüft die identität des zertifikatsantragstellers (Person oder Organisation), bevor sie ein zertifikat ausstellt. digitale zertifikate, die von einer zertifizierungsstelle ausgestellt werden, sind entscheidend für die sichere kommunikation und transaktionen im internet und schaffen vertrauen in digitale identitäten.
+        </p>
+    </section>
+    <section class="slide">
+        <h2>was ist ein root-zertifikat</h2>
+        <p>ein root-zertifikat ist ein unsigniertes public-key-zertifikat oder selbstsigniertes zertifikat einer oberen zertifizierungsstelle (Root-CA), das dazu dient, die gültigkeit aller untergeordneten zertifikate zu validieren</p>
+        <p>wurzelzertifikate sind ein wichtiger bestandteil des Public-Key-Infrastruktursystems (PKI-Systems) 
+        <p>die am häufigsten verwendete kommerzielle variante basiert auf dem ISO X.509-Standard</p>  
+    </section>
+    <section class="slide">              
+        <p>ein X.509-Zertifikat enthält in der regel informationen über den namen des inhabers, dessen öffentlichen schlüssel, eine gültigkeitsdauer sowie den namen der zertifizierungsstelle (CA). 
+        <p>die zertifizierungsstelle signiert diese informationen mit ihrem privaten schlüssel und bestätigt dadurch die korrektheit der in dem zertifikat enthaltenden angaben. 
+        </p>
+    </section>  
+    <section class="slide">
+        <h3>welche rootzertifikate sind auf welchen geräten?</h3>
+        <p>die meisten betriebssysteme und browser enthalten eine liste mit vertrauenswürdigen zertifizierungsstellen</p>
+        <p>die liste der vertrauenswürdigen zertifizierungsstellen wird von den herstellern der betriebssysteme und browsern gepflegt</p>
+        <p>diese list ist in der regel in den einstellungen des betriebssystems oder browsers zu finden und kann in der regel auch erweitert werden</p>
+        </section>
+    <section class="slide">
+        <p><a href="https://support.apple.com/de-de/HT213464">ein beispiel für eine solche liste von rootzertifikaten</a></p>
+        <p>man kann sich die rootzertifikate auch auf dem rechner ansehen</p>
+    </section>
+    <section class="slide">
+        <h3>der rsa verschlüsselungsalgorithmus</h3>
+        <p>der RSA-Algorithmus ist ein asymmetrisches kryptosystem, das sowohl zum verschlüsseln als auch zum signieren von daten verwendet werden kann</p>
+        <p>das kryptosystem wurde 1977 von ron rivest, adi shamir und leonard adleman am MIT entwickelt</p>
+        <p>der name RSA setzt sich aus den anfangsbuchstaben der nachnamen der drei entwickler zusammen</p>
+    </section>
+    <section class="slide">
+        <p>der RSA-Algorithmus ist der erste praktisch verwendbare public-key-algorithmus</p>
+        <p>er ist nach wie vor einer der meistverwendeten und sichersten asymmetrischen verschlüsselungsverfahren</p>
+    </section>
+    <section class="slide">
+        <h3>SSH-Key mit dem RSA-Algorithmus</h3>
+        <p>um eine sichere verbindung zu einem entfernten computer herzustellen, braucht man einen ssh-key. einen solchen können wir erstellen und er besteht aus einem öffentlichen und einem privaten schlüssel</p>
+        <p>der öffentliche schlüssel wird auf dem entfernten computer gespeichert</p>
+        <p>der private schlüssel wird auf dem eigenen computer gespeichert</p>
+    </section>
+    <section class="slide">
+        <p>der private schlüssel sollte nicht weitergegeben werden</p>
+        <p>der öffentliche schlüssel kann weitergegeben werden</p>
+        <p>beim anmelden wird das schlüsselpaar verglichen und bei übereinstimmung eine sichere verbindung aufgebaut. </p>
+    </section>
+    <section class="slide">
+        <h2>SSH-Key mit dem RSA-Algorithmus erstellen</h2>
+        <p>um einen ssh-key zu erstellen, öffnen wir ein terminal oder die powershell und geben folgendes ein</p>
+        <p>ssh-keygen -t rsa -b 4096</p>
+        <p>der öffentliche schlüssel hat die endung .pub</p>
+        <p>der private schlüssel hat keine endung</p>
+        <p>der key wird dann im verzeichnis .ssh gespeichert</p>
+    </section>
+    <section class="slide">
+        <h2>was sagt uns die uni zu eduroam?</h2>
+        <p><a href="https://www.uni-bielefeld.de/einrichtungen/bits/services/infra/wlan/">hier</a> findet ihr das, was die uni zum wlan sagt</p>
+    </section>
+    <section class="slide">
+        <h2>eduroam auf unseren geräten einrichten</h2>
+        <p>die uni hat anleitungen für die einrichtung von eduroam auf den geräten</p>
+        <p><a href="https://www.uni-bielefeld.de/einrichtungen/bits/services/infra/wlan/#comp_000062e33f26_0000000db8_4ee5">hier</a> finden wir die anleitungen</p>
+    </section>
+    <section class="slide">
+        <h2>das konfigurationsassistent tool (cat)</h2>
+        <p>das konfigurationsassistent tool (cat) ist ein programm, das die einrichtung von eduroam auf den geräten vereinfacht</p>
+        <p>das programm ist für alles außer windows und für windows verfügbar</p>
+        <p>das programm ist <a href="https://cat.eduroam.org/">hier</a> zu finden</p>
+        </section>
+    <section class="slide">
+        <h3>alles außer windows</h3>
+        <p>für alles außer windows wird eine datei namens eduroam-OS_X-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_Android,_iOS,_MacOS,_Linux.mobileconfig heruntergeladen</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam und das format mobileconfig, stellt ein profil dar</p>
+    </section>
+    <section class="slide">
+        <h2>was ist ein profil?</h2>
+        <p>profile sind für entwickler, damit diese ganz viele geräte mit einer einzigen datei konfigurieren können</p>
+    </section>
+    <section class="slide">
+        <h2>was ist eine konfiguration?</h2>
+        <p>mit einer konfiguration bezeichnet man eine bestimmte anpassung von programmen und/oder hardwarebestandteilen eines computers an das vorhandene system, sowie das system selbst in seiner zusammenstellung. eine konfiguration besteht aus einer oder mehreren Einstellungen und kann daher als zusammenfassung (konfigurationseinstellungen) dieser verstanden werden</p>
+    </section>
+    <section class="slide">
+        <h3>das profil installieren</h3>
+        <p>mit konfigurationsprofilen werden also einstellungen festgelegt, die es uns ermöglichen, unsere geräte in netzwerken und für accounts von unternehmen oder bildungseinrichtungen zu verwenden.</p>
+        <p>wir werden aufgefordert, das konfigurationsprofil zu installieren, das von einer webseite heruntergeladen werden muss</p>
+        <p>danach werden wir um unsere erlaubnis zum installieren des profils gebeten.</p>
+    </section>  
+    <section class="slide">
+        <p>wenn wir die datei öffnen, werden informationen zum inhalt angezeigt.</p>
+        <p>wir können die installierten profile unter „Einstellungen“ anzeigen.</p>
+        <p>wenn wir ein profil löschen, werden alle damit verknüpften einstellungen, apps und daten ebenfalls gelöscht.</p>
+    </section>
+    <section class="slide">
+        <p>auf dem mac befinden sich die profile ganz unten unter datenschutz und sicherheit</p>
+        <p>hier wird das profil angezeigt und kann installiert werden</p>
+    </section>
+    <section class="slide">
+        <h3>windows</h3>
+        <p>für windows wird eine datei namens eduroam-W10-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_Windows_10_11.exe heruntergeladen</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam</p>
+    </section>
+    <section class="slide">
+        <h3>android</h3>
+        <p>weil es so viele unterschiedliche android geräte gibt, hat eduroam im ersten schritt eine app gebaut, die die konfigurationsdaten auf jedem gerät an die richtige stelle packt</p>
+        <p>die app heißt eduroam cat und ist <a href="https://play.google.com/store/apps/details?id=uk.ac.swansea.eduroamcat">hier</a> zu finden</p>
+    </section>
+    <section class="slide">
+        <h3>ios</h3>
+        <p>für ios wird die datei namens eduroam-iOS-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_iOS.mobileconfig heruntergeladen</p>
+        <p>eh manchmal träumt der copilot von visual studio code auch ;-))</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam</p>
+    </section>
+
+
+<!--
+            
+        
 
     <section class="slide">
         <h2>wieviele sind wir?</h2>
@@ -93,6 +227,7 @@
             <li>bestellungen</li>
         </ul>
     </section>
+-->
     
 
 
