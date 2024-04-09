@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Die dritte Sitzung der digitalen Angebote AG</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="../../shower/themes/ribbon/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Digitale Angebote der Uni Bielefeld</h1>
+        <p>unsere selbstorganisierte Arbeitsgemeinschaft zu diesem Thema</p>
+    </header>
+        
+
+    <section class="slide">
+        <h2>Herzlich willkommen allen, die wiedergekommen sind</h2>
+        <h2>Herzlich willkommen allen, die heute neu dabei sind</h2>
+    </section>
+    <section class="slide">
+        <h2>was wir heute vorhaben?</h2>
+        <ol>
+            <li>sind euch irgendwelche probleme aufgefallen?</li>
+            <li>fortsetzung der eduroam geschichte</li>
+            <li>ssh und ssl</li>
+        
+        </ol>
+    </section>
+    <section class="slide">
+        <p>zertifikate ermöglichen es zusammen mit der Public Key Infrastruktur (PKI), informationen im internet sicher und verschlüsselt zu übertragen. basis der verschlüsselung bilden asymmetrische kryptographische Verfahren mit privaten und öffentlichen schlüsseln.
+        <p>das Zertifikat bestätigt zuverlässig, zu wem der öffentliche schlüssel gehört.</p>
+        <p>browser und betriebssysteme führen eine liste mit vertrauenswürdigen zertifizierungsstellen.</p>
+    </section>
+    <section class="slide">
+        <p>ist ein zertifikat von einer solchen Zertifizierungsstelle ausgestellt, betrachtet es der rechner als echt.</p>
+        <p>die ITU-empfehlung X.509 v3 regelt das format und den inhalt von digitalen zertifikaten.
+        </p>
+    </section>
+    <section class="slide">
+        <h2>was ist eine zertifizierungsstelle</h2>
+        <p>eine zertifizierungsstelle (certificate authority oder certification authority, kurz CA) ist eine vertrauenswürdige einrichtung, die digitale zertifikate zur überprüfung von identitäten im internet ausstellt. die CA prüft die identität des zertifikatsantragstellers (Person oder Organisation), bevor sie ein zertifikat ausstellt. digitale zertifikate, die von einer zertifizierungsstelle ausgestellt werden, sind entscheidend für die sichere kommunikation und transaktionen im internet und schaffen vertrauen in digitale identitäten.
+        </p>
+    </section>
+    <section class="slide">
+        <h2>was ist ein root-zertifikat</h2>
+        <p>ein root-zertifikat ist ein unsigniertes public-key-zertifikat oder selbstsigniertes zertifikat einer oberen zertifizierungsstelle (Root-CA), das dazu dient, die gültigkeit aller untergeordneten zertifikate zu validieren</p>
+        <p>wurzelzertifikate sind ein wichtiger bestandteil des Public-Key-Infrastruktursystems (PKI-Systems) 
+        <p>die am häufigsten verwendete kommerzielle variante basiert auf dem ISO X.509-Standard</p>  
+    </section>
+    <section class="slide">              
+        <p>ein X.509-Zertifikat enthält in der regel informationen über den namen des inhabers, dessen öffentlichen schlüssel, eine gültigkeitsdauer sowie den namen der zertifizierungsstelle (CA). 
+        <p>die zertifizierungsstelle signiert diese informationen mit ihrem privaten schlüssel und bestätigt dadurch die korrektheit der in dem zertifikat enthaltenden angaben. 
+        </p>
+    </section>  
+    <section class="slide">
+        <h3>welche rootzertifikate sind auf welchen geräten?</h3>
+        <p>die meisten betriebssysteme und browser enthalten eine liste mit vertrauenswürdigen zertifizierungsstellen</p>
+        <p>die liste der vertrauenswürdigen zertifizierungsstellen wird von den herstellern der betriebssysteme und browsern gepflegt</p>
+        <p>diese list ist in der regel in den einstellungen des betriebssystems oder browsers zu finden und kann in der regel auch erweitert werden</p>
+        </section>
+    <section class="slide">
+        <p><a href="https://support.apple.com/de-de/HT213464">ein beispiel für eine solche liste von rootzertifikaten</a></p>
+        <p>man kann sich die rootzertifikate auch auf dem rechner ansehen</p>
+    </section>
+    <section class="slide">
+        <h3>der rsa verschlüsselungsalgorithmus</h3>
+        <p>der RSA-Algorithmus ist ein asymmetrisches kryptosystem, das sowohl zum verschlüsseln als auch zum signieren von daten verwendet werden kann</p>
+        <p>das kryptosystem wurde 1977 von ron rivest, adi shamir und leonard adleman am MIT entwickelt</p>
+        <p>der name RSA setzt sich aus den anfangsbuchstaben der nachnamen der drei entwickler zusammen</p>
+    </section>
+    <section class="slide">
+        <p>der RSA-Algorithmus ist der erste praktisch verwendbare public-key-algorithmus</p>
+        <p>er ist nach wie vor einer der meistverwendeten und sichersten asymmetrischen verschlüsselungsverfahren</p>
+    </section>
+    <section class="slide">
+        <h3>der RSA verschlüsselungsalgorithmus</h3>
+        <p>der RSA-Algorithmus basiert auf der mathematischen schwierigkeit, große zahlen in ihre primfaktoren zu zerlegen</p>
+        <p>das verfahren beruht auf der tatsache, dass es sehr einfach ist, die multiplikation zweier primzahlen zu berechnen, während es sehr schwierig ist, aus dem produkt zweier primzahlen die ursprünglichen primzahlen zu berechnen</p>
+        <p>das verfahren ist also asymmetrisch</p>
+        <p>sagt der copilot und hat recht damit</p>
+    </section>
+    <section class="slide">
+        <h3>der RSA verschlüsselungsalgorithmus</h3>
+        <p>das verfahren ist also asymmetrisch</p>
+        <p>das bedeutet, dass es zwei schlüssel gibt, einen öffentlichen und einen privaten</p>
+        <p>der öffentliche schlüssel kann zum verschlüsseln von daten verwendet werden</p>
+        <p>der private schlüssel kann zum entschlüsseln von daten verwendet werden</p>
+        <p>sagt der copilot</p>
+    </section>
+    <selection class="slide">
+        <h3>das ssh protokoll</h3>
+        <p>secure shell oder ssh bezeichnet ein kryptographisches netzwerkprotokoll für den sicheren betrieb von netzwerkdiensten über ungesicherte netzwerke. häufig wird es verwendet, um lokal eine entfernte kommandozeile verfügbar zu machen</p>
+    </selection>
+    <section class="slide">
+        <h3>SSH-Key mit dem RSA-Algorithmus</h3>
+        <p>um eine sichere verbindung zu einem entfernten computer herzustellen, braucht man einen ssh-key. einen solchen können wir erstellen und er besteht aus einem öffentlichen und einem privaten schlüssel</p>
+        <p>der öffentliche schlüssel wird auf dem entfernten computer gespeichert</p>
+        <p>der private schlüssel wird auf dem eigenen computer gespeichert</p>
+    </section>
+    <section class="slide">
+        <p>der private schlüssel sollte nicht weitergegeben werden</p>
+        <p>der öffentliche schlüssel kann weitergegeben werden</p>
+        <p>beim anmelden wird das schlüsselpaar verglichen und bei übereinstimmung eine sichere verbindung aufgebaut. </p>
+    </section>
+    <section class="slide">
+        <h2>SSH-Key mit dem RSA-Algorithmus erstellen</h2>
+        <p>um einen ssh-key zu erstellen, öffnen wir ein terminal oder die powershell und geben folgendes ein</p>
+        <p>ssh-keygen -t rsa -b 4096</p>
+        <p>der öffentliche schlüssel hat die endung .pub</p>
+        <p>der private schlüssel hat keine endung</p>
+        <p>der key wird dann im verzeichnis .ssh gespeichert</p>
+    </section>
+    <section class="slide">
+        <h2>was sagt uns die uni zu eduroam?</h2>
+        <p><a href="https://www.uni-bielefeld.de/einrichtungen/bits/services/infra/wlan/">hier</a> findet ihr das, was die uni zum wlan sagt</p>
+    </section>
+    <section class="slide">
+        <h2>eduroam auf unseren geräten einrichten</h2>
+        <p>die uni hat anleitungen für die einrichtung von eduroam auf den geräten</p>
+        <p><a href="https://www.uni-bielefeld.de/einrichtungen/bits/services/infra/wlan/#comp_000062e33f26_0000000db8_4ee5">hier</a> finden wir die anleitungen</p>
+    </section>
+    <section class="slide">
+        <h2>das konfigurationsassistent tool (cat)</h2>
+        <p>das konfigurationsassistent tool (cat) ist ein programm, das die einrichtung von eduroam auf den geräten vereinfacht</p>
+        <p>das programm ist für alles außer windows und für windows verfügbar</p>
+        <p>das programm ist <a href="https://cat.eduroam.org/">hier</a> zu finden</p>
+        </section>
+    <section class="slide">
+        <h3>alles außer windows</h3>
+        <p>für alles außer windows wird eine datei namens eduroam-OS_X-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_Android,_iOS,_MacOS,_Linux.mobileconfig heruntergeladen</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam und das format mobileconfig, stellt ein profil dar</p>
+    </section>
+    <section class="slide">
+        <h2>was ist ein profil?</h2>
+        <p>profile sind für entwickler, damit diese ganz viele geräte mit einer einzigen datei konfigurieren können</p>
+    </section>
+    <section class="slide">
+        <h2>was ist eine konfiguration?</h2>
+        <p>mit einer konfiguration bezeichnet man eine bestimmte anpassung von programmen und/oder hardwarebestandteilen eines computers an das vorhandene system, sowie das system selbst in seiner zusammenstellung. eine konfiguration besteht aus einer oder mehreren Einstellungen und kann daher als zusammenfassung (konfigurationseinstellungen) dieser verstanden werden</p>
+    </section>
+    <section class="slide">
+        <h3>das profil installieren</h3>
+        <p>mit konfigurationsprofilen werden also einstellungen festgelegt, die es uns ermöglichen, unsere geräte in netzwerken und für accounts von unternehmen oder bildungseinrichtungen zu verwenden.</p>
+        <p>wir werden aufgefordert, das konfigurationsprofil zu installieren, das von einer webseite heruntergeladen werden muss</p>
+        <p>danach werden wir um unsere erlaubnis zum installieren des profils gebeten.</p>
+    </section>  
+    <section class="slide">
+        <p>wenn wir die datei öffnen, werden informationen zum inhalt angezeigt.</p>
+        <p>wir können die installierten profile unter „Einstellungen“ anzeigen.</p>
+        <p>wenn wir ein profil löschen, werden alle damit verknüpften einstellungen, apps und daten ebenfalls gelöscht.</p>
+    </section>
+    <section class="slide">
+        <p>auf dem mac befinden sich die profile ganz unten unter datenschutz und sicherheit</p>
+        <p>hier wird das profil angezeigt und kann installiert werden</p>
+    </section>
+    <section class="slide">
+        <h3>windows</h3>
+        <p>für windows wird eine datei namens eduroam-W10-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_Windows_10_11.exe heruntergeladen</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam</p>
+    </section>
+    <section class="slide">
+        <h3>android</h3>
+        <p>weil es so viele unterschiedliche android geräte gibt, hat eduroam im ersten schritt eine app gebaut, die die konfigurationsdaten auf jedem gerät an die richtige stelle packt</p>
+        <p>die app heißt eduroam cat und ist <a href="https://play.google.com/store/apps/details?id=uk.ac.swansea.eduroamcat">hier</a> zu finden</p>
+    </section>
+    <section class="slide">
+        <h3>ios</h3>
+        <p>für ios wird die datei namens eduroam-iOS-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_iOS.mobileconfig heruntergeladen</p>
+        <p>eh manchmal träumt der copilot von visual studio code auch ;-))</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam</p>
+    </section>
+    <section class="slide">
+        <h3>linux</h3>
+        <p>für linux wird die datei namens eduroam-linux-Universitat_Bielefeld-eduroam_unibi_Sectigo_CA_Linux.sh heruntergeladen</p>
+        <p>diese datei wird dann auf das gerät übertragen und ausgeführt und sie enthält die konfiguration für eduroam</p>
+        <p>sagt der copilot - aber keine ahnung, ob das stimmt? </p>
+    </section>
+    <section class="slide">
+        <h3>das ssl protokoll</h3>
+        <p>das ssl-protokoll (secure sockets layer) ist ein hybrides verschlüsselungsprotokoll zur sicheren datenübertragung im internet. es wurde von netscape entwickelt und ist inzwischen ein standard, der von allen gängigen browsern unterstützt wird. das ssl-protokoll wird auch als tls (transport layer security) bezeichnet</p>
+        <p>ssl ist die standardtechnologie für die absicherung von internetverbindungen durch die verschlüsselung der daten, die zwischen einer website und einem browser (oder zwischen zwei servern) übertragen werden. durch SSL wird verhindert, dass hacker die übertragenen informationen, darunter personenbezogene oder finanzdaten, mitlesen oder stehlen können.</p>
+    </section>
+
+
+<!--
+            
+        
+
+    <section class="slide">
+        <h2>wieviele sind wir?</h2>
+        <ul>
+            <li><a href="https://appsag.github.io/slidehtmlcssspielwiese/chantal/index.html?full#9">unser neuer 2erGruppenGenerator</a></li>
+            <li>zusammen mit dem coach auf das schon gelernte schauen</li>
+            <li>bevor ihr zu den passwörtern kommt</li>
+            <li>hat werner zwei sehr interessante folien für euch gebaut</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>Passwörter</h2>
+        <p><a href="https://checkdeinpasswort.de/">wie sicher ist mein passwort</a></p>
+        <p><a href="https://mecodia-medienkompetenz.de/materialien/wie-werden-passwoerter-geknackt/">wie werden passwörter geknackt</a></p>
+        <p><a href="https://mecodia-medienkompetenz.de/materialien/anleitung-wie-erstelle-ich-ein-sicheres-passwort-das-ich-mir-merken-kann/">wie erstellt man gute passwörter</a></p>
+        </section>
+    <section class="slide">
+        <h2>jetzt zum praktischen teil</h2>
+        <p>hierzu gehen wir zu unserem lernmaterial und sehen uns an, wie wir damit umgehen werden</p>
+    </section>
+    
+
+    <section class="slide">
+        <h2>werners folien zum thema passwörter</h2>
+    </section>
+    <section class="slide" id="picture">
+        <h2></h2>
+        <figure>
+            <img class="cover" src="../pictures/werner_pw_1.png" alt="was passiert mit passwörtern im internet">
+            <figcaption class="copyright right black">
+                <p>Quelle: HPI Tatort Internet</p>
+        </figure>
+        <style>
+            #picture h2 {
+                color: black;
+            }
+        </style>
+    </section>
+</section>
+</section>
+
+    <section class="slide" id="picture">
+        <h2></h2>
+        <figure>
+            <img class="cover" src="../pictures/werner_pw_2.png" alt="wie lange dauert das knacken eines passwortes ">
+            <figcaption class="copyright right black">
+                <p>© werner</p>
+            </figcaption>
+        </figure>
+        <style>
+            #picture h2 {
+                color: black;
+            }
+        </style>
+    </section>
+    <section class="slide">
+        <h2>was hat prisma noch zu bieten?</h2>
+        <ul>
+            <li>das passwort vergessen -> das passwort neu setzen</li>
+            <li>unicard</li>
+            <li>kontenübersicht</li>
+            <li>passwörter ändern</li>
+            <li>bestellungen</li>
+        </ul>
+    </section>
+-->
+    
+
+
+    <!--
+Hier könnt ihr euch Musterslides aussuchen, kopieren und anpassen
+
+
+    <section class="slide">
+        <h2>Shower key features</h2>
+        <ol>
+            <li>Built on HTML, CSS and JavaScript</li>
+            <li>Works in all modern browsers</li>
+            <li>Themes are separated from engine</li>
+            <li>Fully keyboard accessible</li>
+            <li>Printable to PDF</li>
+        </ol>
+        <p class="note">Shower ['ʃəuə] noun. A person or thing that shows.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Plain text on your slides</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Two columns if you like</h2>
+        <div class="columns two">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>All kind of lists</h2>
+        <ol>
+            <li>Simple lists are marked with bullets</li>
+            <li>Ordered lists begin with a number</li>
+            <li>You can even nest lists one inside another
+                <ul>
+                    <li>Or mix their types</li>
+                    <li>But do not go too far</li>
+                    <li>Otherwise audience will be bored</li>
+                </ul>
+            </li>
+            <li>Look, seven rows exactly!</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Serious citations</h2>
+        <figure>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            </blockquote>
+            <figcaption>Marcus Tullius Cicero</figcaption>
+        </figure>
+    </section>
+
+    <section class="slide">
+        <h2>Code samples</h2>
+        <pre>
+            <code>&lt;!DOCTYPE html&gt;</code>
+            <code class="mark">&lt;html lang="en"&gt;</code>
+            <code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
+            <code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+            <code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+            <code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+            <code><mark>&lt;/head&gt;</mark></code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Even tables</h2>
+        <table>
+        <tr>
+            <th scope="col">Locavore</th>
+            <th>Umami</th>
+            <th>Helvetica</th>
+            <th>Vegan</th>
+        </tr>
+        <tr>
+            <th scope="row">Fingerstache</th>
+            <td>Kale</td>
+            <td>Chips</td>
+            <td>Keytar</td>
+        </tr>
+        <tr>
+            <th scope="row">Sriracha</th>
+            <td>Gluten-free</td>
+            <td>Ennui</td>
+            <td>Keffiyeh</td>
+        </tr>
+        <tr>
+            <th scope="row">Thundercats</th>
+            <td>Jean</td>
+            <td>Shorts</td>
+            <td>Biodiesel</td>
+        </tr>
+        <tr>
+            <th scope="row">Terry</th>
+            <td>Richardson</td>
+            <td>Swag</td>
+            <td>Blog</td>
+        </tr>
+        </table>
+        <p>It’s good to have information organized.</p>
+    </section>
+
+    <section class="slide" id="picture">
+        <h2>Pictures</h2>
+        <figure>
+            <img class="cover" src="pictures/picture.jpg" alt="Orange typewriter on a wooden table close-up">
+            <figcaption class="copyright right white">
+                <a href="https://fiftyfootshadows.net">© John Carey</a>
+            </figcaption>
+        </figure>
+        <style>
+            #picture h2 {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout shrink">You can even shout this way</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Inner navigation</h2>
+        <ol>
+            <li>Lets you reveal list items one by one</li>
+            <li class="next">To keep some key points</li>
+            <li class="next">In secret from audience</li>
+            <li class="next">But it will work only once</li>
+            <li class="next">Nobody wants to see the same joke twice</li>
+        </ol>
+    </section>
+
+    <section class="slide" id="see-more">
+        <h2 class="shout">
+            <img src="pictures/logo.svg" alt="Shower logo">
+            <a href="https://github.com/shower/shower">See more on GitHub</a>
+        </h2>
+        <style>
+            #see-more h2 {
+                font-size: 100px
+            }
+
+            #see-more img {
+                width: 0.72em;
+                height: 0.72em;
+            }
+        </style>
+    </section>
+
+-->
+
+    <footer class="badge">
+        
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="../../shower/shower.js"></script>
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
